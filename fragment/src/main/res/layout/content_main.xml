@@ -12,8 +12,47 @@
     tools:context="com.moby.fragment.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rg_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbtn_page1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="page1" />
+
+            <RadioButton
+                android:id="@+id/rbtn_page2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="page2" />
+
+            <RadioButton
+                android:id="@+id/rbtn_page3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="page3" />
+
+            <RadioButton
+                android:id="@+id/rbtn_page4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="page4" />
+        </RadioGroup>
+    </LinearLayout>
 </RelativeLayout>

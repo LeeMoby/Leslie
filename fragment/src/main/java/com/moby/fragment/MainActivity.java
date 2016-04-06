@@ -8,8 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+    private RadioGroup rg_page;
+    private RadioButton rbtn_page1;
+    private RadioButton rbtn_page2;
+    private RadioButton rbtn_page3;
+    private RadioButton rbtn_page4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        initActivity();
+    }
+
+    private void initActivity() {
+        rg_page = (RadioGroup) findViewById(R.id.rg_page);
+        rbtn_page1 = (RadioButton) findViewById(R.id.rbtn_page1);
+        rbtn_page2 = (RadioButton) findViewById(R.id.rbtn_page2);
+        rbtn_page3 = (RadioButton) findViewById(R.id.rbtn_page3);
+        rbtn_page4 = (RadioButton) findViewById(R.id.rbtn_page4);
     }
 
     @Override
@@ -48,5 +65,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.rbtn_page1:
+                break;
+            case R.id.rbtn_page2:
+                break;
+            case R.id.rbtn_page3:
+                break;
+            case R.id.rbtn_page4:
+                break;
+            default:
+                break;
+        }
     }
 }
